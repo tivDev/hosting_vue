@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>API with Axios in Vue</h1>
+    
     <h2>List of Users:</h2>
     <ul>
       <li v-for="user in users" :key="user.id">
