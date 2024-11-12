@@ -1,13 +1,24 @@
 <template>
-  <div>
+  <div class="container">
     <h1>API with Axios in Vue</h1>
     
     <h2>List of Users:</h2>
-    <ul>
-      <li v-for="user in users" :key="user.id">
-        {{ user.name }} - {{ user.email }}
-      </li>
-    </ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users" :key="user.id">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -36,5 +47,9 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styles here */
+thead th{
+  background: black;
+  color: white;
+}
 </style>
+
